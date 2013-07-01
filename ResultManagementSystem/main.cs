@@ -36,7 +36,6 @@ namespace ResultManagementSystem
 
             Location = new Point(0, 0);
             Size = Screen.PrimaryScreen.WorkingArea.Size;
-            // this.WindowState = FormWindowState.Maximized;
 
 
             sidebar.MdiParent = this;
@@ -47,23 +46,18 @@ namespace ResultManagementSystem
 
             sidebar.Dock = DockStyle.Left; //Sidebar
             viewres.Dock = DockStyle.Right;
-            //f1.Dock = DockStyle.Right;
-            //f2.Show();
-            //f3.Show();
+
             common.login.Show();
         }
 
         public void SetLoginUser(string id)
         {
-            //mnusrname.Text = username;
             tid = id;
-            //mnubar.Refresh();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             Opacity += 0.07;
-            //if (this.Opacity == 1)
         }
 
         protected override void WndProc(ref Message m)

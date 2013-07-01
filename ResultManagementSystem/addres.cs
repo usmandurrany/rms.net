@@ -57,23 +57,6 @@ namespace ResultManagementSystem
             dt.Columns.Add("year");
             dt.Columns.Add("semester");
 
-
-            //addres.Columns[7].Visible = false;
-            //addres.Columns[8].Visible = false;
-            //viewres.Columns[9].Visible = false;
-            //MySqlCommand cmd = new MySqlCommand();
-            //cmd.CommandText = "SELECT seatno, s_name FROM student WHERE seatno BETWEEN '" + (seattype + seatno[0]) + "' AND '" + (seattype + seatno[1]) + "'";
-            //cmd.Connection = database.conn;
-            //MySqlDataReader reader = cmd.ExecuteReader();
-            //List<string> s_name = new List<string>();
-            //List<string> seat_no = new List<string>();
-
-            //while (reader.Read())
-            //{
-            //    seat_no.ad
-            //    s_name.Add(reader[1].ToString());
-            //}
-            //reader.Close();
             try
             {
                 for (int i = 0; i <= (Convert.ToInt32(seatno[1]) - Convert.ToInt32(seatno[0])); i++)

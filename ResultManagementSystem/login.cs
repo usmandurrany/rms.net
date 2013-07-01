@@ -34,11 +34,8 @@ namespace ResultManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            List<string> results = database.login_check(loginas.Text.ToLower(), label2.Text.ToLower(), txtusrname.Text,
-                                                        txtpass.Text);
-            //MessageBox.Show(results[1].ToString());
-            //UserAuth auth = new UserAuth(txtusrname.Text.ToString(), txtpass.Text.ToString());
-            // bool success = auth.CheckUser();
+            List<string> results = database.login_check(loginas.Text.ToLower(), label2.Text.ToLower(), txtusrname.Text,txtpass.Text);
+
             if (results.Count != 0)
             {
                 MdiParent.MainMenuStrip.Enabled = true;
@@ -57,7 +54,6 @@ namespace ResultManagementSystem
                 common.sidebar = sidebar;
                 common.sidebar.SetValues(results);
                 common.sidebar.Show();
-                //common.ins2.Show();
                 Close();
             }
         }

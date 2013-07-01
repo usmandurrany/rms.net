@@ -69,10 +69,7 @@ namespace ResultManagementSystem
                 if (percentage > 89)
                     calgpa.Text = "4.0 / A+";
             }
-            //if (percentage < 50)
-            //    row_value[1] = "Failed";
-            //else
-            //    row_value[1] = "Passed";
+
         }
 
         private void label2_Click(object sender, EventArgs e)

@@ -17,20 +17,12 @@ namespace ResultManagementSystem
         public frmviewres()
         {
             InitializeComponent();
-            //viewres.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            //viewres.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
-            //viewres.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            //viewres.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         private void frmviewres_Load(object sender, EventArgs e)
         {
-            //da = new MySqlDataAdapter();
-            //dt = new DataTable();
-            //database.cmd.CommandText =
-            //    ;
-            //database.cmd.Connection = database.conn;
-            //da.SelectCommand = database.cmd;
+
            dt = database.dt_query("SELECT result.*, student.seatno, student.s_name FROM result LEFT JOIN student on result.seatno = student.seatno WHERE result.c_no ='" +
                 course + "' AND result.section = '" + section + "' AND result.year = '" + year + "'");
            viewres.DataSource = dt;
@@ -70,19 +62,13 @@ namespace ResultManagementSystem
 
             this.year = year;
 
-            // this.semester =semester;
+   
         }
 
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
-            //MySqlCommand cmd= new MySqlCommand();
-            //cmd.CommandText = "SELECT result.*, student.seatno, student.s_name, FROM result LEFT JOIN student on result.seatno = student.seatno WHERE result.seatno LIKE '%" + txtsearch.Text + "%' AND result.c_no ='" + course + "'";
-            //cmd.Connection= database.conn;
-            //MySqlDataAdapter da = new MySqlDataAdapter();
-            //DataTable dt = new DataTable();
-            //da.SelectCommand = cmd;
-            //da.Fill(dt);
+
             ((DataTable) viewres.DataSource).DefaultView.RowFilter = string.Format("seatno LIKE '%{0}%'",
                                                                                     txtsearch.Text);
 
@@ -101,14 +87,7 @@ namespace ResultManagementSystem
             viewres.Columns[10].HeaderText = "Students Name";
             viewres.Columns[10].DisplayIndex = 2;
             viewres.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //MySqlDataReader reader = database.cmd.ExecuteReader();
-            //while (reader.Read())
-            //{
-            //    reslist.Items.Add(reader[2]);
-            //    reslist.Update();
 
-            //}
-            //reader.Close();
         }
 
         private void mnusearch_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -120,10 +99,8 @@ namespace ResultManagementSystem
             MySqlCommand cmd = new MySqlCommand();
 
             cmd.CommandText = "SELECT t_name FROM faculty WHERE tid = '" + dt.Rows[0]["t_id"] + "'";
-            // MySqlDataReader reader = new MySqlDataReader();
             cmd.Connection = database.conn;
             string tname = cmd.ExecuteScalar().ToString();
-            //reader.Read();
 
             var rptview = new frmrptview(dt, tname);
             rptview.Show();
@@ -151,7 +128,6 @@ namespace ResultManagementSystem
 
         private void mnusave_Click(object sender, EventArgs e)
         {
-            //MySqlDataAdapter da = new MySqlDataAdapter();
             mnusave.Enabled = false;
             mnuedit.Enabled = true;
             da.UpdateCommand =

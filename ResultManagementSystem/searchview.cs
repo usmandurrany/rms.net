@@ -21,8 +21,7 @@ namespace ResultManagementSystem
             searchres.Columns[7].HeaderText = "Admission Date";
             searchres.Columns[8].Visible = false;
             searchres.Columns[9].Visible = false;
-            //earchres.Columns[10].HeaderText = "Students Name";
-            //searchres.Columns[10].DisplayIndex = 2;
+
             searchres.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             searchres.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
@@ -34,7 +33,6 @@ namespace ResultManagementSystem
             searchres.Columns[0].HeaderText = "Teacher ID";
             searchres.Columns[1].HeaderText = "Teacher Name";
             searchres.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //searchres.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             searchres.Columns[2].HeaderText = "Email";
             searchres.Columns[3].HeaderText = "Qualification";
             searchres.Columns[4].HeaderText = "Faculty of";

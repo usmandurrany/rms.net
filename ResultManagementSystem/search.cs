@@ -38,13 +38,7 @@ namespace ResultManagementSystem
                 column = "f_name";
             if (searchas.Text == "Year of Enrolment")
                 column = "yoe";
-            //var cmd = new MySqlCommand();
-            //cmd.CommandText = "SELECT * FROM student WHERE " + column.ToLower() + " LIKE '%" + searchstr.Text + "%'";
-            //cmd.Connection = database.conn;
-            //var da = new MySqlDataAdapter();
-            //da.SelectCommand = cmd;
-            //var dt = new DataTable();
-            //da.Fill(dt);
+
             var searchview = new frmsearchview(database.dt_query("SELECT * FROM student WHERE " + column.ToLower() + " LIKE '%" + searchstr.Text + "%'"));
             searchview.MdiParent = MdiParent;
 
@@ -70,13 +64,7 @@ namespace ResultManagementSystem
                 column = "t_name";
             if (fsearchas.Text == "Faculty of")
                 column = "f_of";
-            //var cmd = new MySqlCommand();
-            //cmd.CommandText = "SELECT * FROM faculty WHERE " + column.ToLower() + " LIKE '%" + searchstrf.Text + "%'";
-            //cmd.Connection = database.conn;
-            //var da = new MySqlDataAdapter();
-            //da.SelectCommand = cmd;
-            //var dt = new DataTable();
-            //da.Fill(dt);
+
             var searchview = new frmsearchview(database.dt_query("SELECT * FROM faculty WHERE " + column.ToLower() + " LIKE '%" + searchstrf.Text + "%'"), "faculty");
             searchview.MdiParent = MdiParent;
 

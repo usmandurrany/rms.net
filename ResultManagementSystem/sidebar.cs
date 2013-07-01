@@ -66,7 +66,6 @@ namespace ResultManagementSystem
         private void reslist_SelectedIndexChanged(object sender, EventArgs e)
         {
             int item = reslist.SelectedIndex;
-            //MessageBox.Show(item.ToString());
             for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
             {
                 if (Application.OpenForms[i].Name == "frmviewres")
@@ -77,7 +76,6 @@ namespace ResultManagementSystem
                 item = 0;
             string[] course = reslist.Items[item].ToString().Split(' ');
             viewres.getresult(course[0], course[2], course[4]);
-            //viewres.getresult(reslist.Items[item].ToString());
             viewres.MdiParent = MdiParent;
 
             if (Application.OpenForms.Count == 2)
@@ -103,15 +101,7 @@ namespace ResultManagementSystem
                 reslist.Update();
             }
             reader.Close();
-            //database.cmd.CommandText = "SELECT DISTINCT result.c_no ,course.c_name FROM result LEFT JOIN course on result.c_no = course.c_no WHERE result.c_no LIKE '%" + resfilter.Text + "%'";
-            //MySqlDataReader reader = database.cmd.ExecuteReader();
-            //while (reader.Read())
-            //{
-            //    reslist.Items.Add(reader[0]+" "+reader[1]);
-            //    reslist.Update();
 
-            //}
-            //reader.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -140,7 +130,6 @@ namespace ResultManagementSystem
             if (item >= 0)
             {
                 string[] course = reslist.Items[item].ToString().Split(' ');
-                // MySqlDataReader reader = new MySqlDataReader();
                 cmd.Connection = database.conn;
                 cmd.CommandText = "(Select c_name from course where c_no ='" + course[0] + "')";
                 string c_name = cmd.ExecuteScalar().ToString();
@@ -154,7 +143,6 @@ namespace ResultManagementSystem
 
         private void btngpa_Click(object sender, EventArgs e)
         {
-            //string[] sno = seatno.Text.Split(' ');
             var gpcalc = new frmgpcalc(seatno.Text);
             gpcalc.MdiParent = MdiParent;
             gpcalc.Show();

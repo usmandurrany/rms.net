@@ -17,10 +17,7 @@ namespace ResultManagementSystem
             var cmd = new MySqlCommand();
 
             cmd.Connection = database.conn;
-            cmd.CommandText = "INSERT INTO student(seatno, s_name, f_name, dob, field, sec, semester, yoe) VALUES('" +
-                              txtseat.Text + "', '" + txtsname.Text + "', '" + txtfname.Text + "', '" + dobpick.Text +
-                              "', '" + txtfield.Text + "', '" + txtsec.Text + "', '" + txtcursem.Text + "', '" +
-                              yoepick.Text + "' )";
+            cmd.CommandText = "INSERT INTO student(seatno, s_name, f_name, dob, field, sec, semester, yoe) VALUES('" +txtseat.Text + "', '" + txtsname.Text + "', '" + txtfname.Text + "', '" + dobpick.Text +"', '" + txtfield.Text + "', '" + txtsec.Text + "', '" + txtcursem.Text + "', '" +yoepick.Text + "' )";
             cmd.ExecuteNonQuery();
         }
 
