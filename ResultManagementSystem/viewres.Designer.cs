@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.viewres = new System.Windows.Forms.DataGridView();
             this.mnusearch = new System.Windows.Forms.MenuStrip();
             this.txtsearch = new System.Windows.Forms.ToolStripTextBox();
@@ -37,6 +37,8 @@
             this.mnuanares = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuedit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnusave = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnucreate = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnucancel = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.viewres)).BeginInit();
             this.mnusearch.SuspendLayout();
             this.SuspendLayout();
@@ -48,24 +50,24 @@
             this.viewres.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.viewres.BackgroundColor = System.Drawing.Color.White;
             this.viewres.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(58)))), ((int)(((byte)(118)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.NullValue = "0";
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.viewres.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(58)))), ((int)(((byte)(118)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.NullValue = "0";
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.viewres.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.viewres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.viewres.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.viewres.DefaultCellStyle = dataGridViewCellStyle2;
             this.viewres.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewres.GridColor = System.Drawing.Color.White;
             this.viewres.Location = new System.Drawing.Point(0, 0);
@@ -76,6 +78,7 @@
             this.viewres.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.viewres.Size = new System.Drawing.Size(657, 545);
             this.viewres.TabIndex = 0;
+            this.viewres.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewres_CellValueChanged);
             // 
             // mnusearch
             // 
@@ -85,10 +88,12 @@
             this.mnuprint,
             this.mnuanares,
             this.mnuedit,
-            this.mnusave});
+            this.mnusave,
+            this.mnucreate,
+            this.mnucancel});
             this.mnusearch.Location = new System.Drawing.Point(0, 0);
             this.mnusearch.Name = "mnusearch";
-            this.mnusearch.Size = new System.Drawing.Size(422, 27);
+            this.mnusearch.Size = new System.Drawing.Size(530, 27);
             this.mnusearch.TabIndex = 1;
             this.mnusearch.Text = "mnusearch";
             this.mnusearch.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnusearch_ItemClicked);
@@ -103,6 +108,7 @@
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(150, 23);
             this.txtsearch.Text = "filter using seat no.";
+            this.txtsearch.Click += new System.EventHandler(this.txtsearch_Click);
             this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
             // mnuprint
@@ -142,6 +148,26 @@
             this.mnusave.Text = "Save";
             this.mnusave.Click += new System.EventHandler(this.mnusave_Click);
             // 
+            // mnucreate
+            // 
+            this.mnucreate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.mnucreate.ForeColor = System.Drawing.Color.White;
+            this.mnucreate.Name = "mnucreate";
+            this.mnucreate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.mnucreate.Size = new System.Drawing.Size(53, 23);
+            this.mnucreate.Text = "Create";
+            this.mnucreate.Click += new System.EventHandler(this.mnucreate_Click);
+            // 
+            // mnucancel
+            // 
+            this.mnucancel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.mnucancel.ForeColor = System.Drawing.Color.White;
+            this.mnucancel.Name = "mnucancel";
+            this.mnucancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.mnucancel.Size = new System.Drawing.Size(55, 23);
+            this.mnucancel.Text = "Cancel";
+            this.mnucancel.Click += new System.EventHandler(this.mnucancel_Click);
+            // 
             // frmviewres
             // 
             this.AutoSize = true;
@@ -171,5 +197,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuanares;
         private System.Windows.Forms.ToolStripMenuItem mnuedit;
         private System.Windows.Forms.ToolStripMenuItem mnusave;
+        private System.Windows.Forms.ToolStripMenuItem mnucreate;
+        private System.Windows.Forms.ToolStripMenuItem mnucancel;
     }
 }

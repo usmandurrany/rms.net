@@ -71,11 +71,10 @@ namespace ResultManagementSystem
                 if (Application.OpenForms[i].Name == "frmviewres")
                     Application.OpenForms[i].Close();
             }
-            var viewres = new frmviewres();
             if (item < 0)
                 item = 0;
             string[] course = reslist.Items[item].ToString().Split(' ');
-            viewres.getresult(course[0], course[2], course[4]);
+            var viewres = new frmviewres(course[0], course[2], course[4]);
             viewres.MdiParent = MdiParent;
 
             if (Application.OpenForms.Count == 2)
@@ -112,8 +111,7 @@ namespace ResultManagementSystem
             MySqlDataReader reader = database.cmd.ExecuteReader();
             while (reader.Read())
             {
-                reslist.Items.Add(reader["c_no"] + " Section " + reader["section"] + " " + reader["t_name"] + " " +
-                                  reader["year"]);
+                reslist.Items.Add(reader["c_no"] + " Section " + reader["section"] + " " + reader["t_name"] + " " +reader["year"]);
             }
             reader.Close();
         }

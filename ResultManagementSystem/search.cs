@@ -39,11 +39,11 @@ namespace ResultManagementSystem
             if (searchas.Text == "Year of Enrolment")
                 column = "yoe";
 
-            var searchview = new frmsearchview(database.dt_query("SELECT * FROM student WHERE " + column.ToLower() + " LIKE '%" + searchstr.Text + "%'"));
-            searchview.MdiParent = MdiParent;
+            var resview = new frmviewres(database.dt_query("SELECT * FROM student WHERE " + column.ToLower() + " LIKE '%" + searchstr.Text + "%'"));
+            resview.MdiParent = MdiParent;
 
 
-            searchview.Show();
+            resview.Show();
         }
 
         private void searchstu_Click(object sender, EventArgs e)
@@ -65,11 +65,11 @@ namespace ResultManagementSystem
             if (fsearchas.Text == "Faculty of")
                 column = "f_of";
 
-            var searchview = new frmsearchview(database.dt_query("SELECT * FROM faculty WHERE " + column.ToLower() + " LIKE '%" + searchstrf.Text + "%'"), "faculty");
-            searchview.MdiParent = MdiParent;
+            var resview = new frmviewres(database.dt_query("SELECT * FROM faculty WHERE " + column.ToLower() + " LIKE '%" + searchstrf.Text + "%'"), "faculty");
+            resview.MdiParent = MdiParent;
 
 
-            searchview.Show();
+            resview.Show();
         }
 
         private void searchfac_Click(object sender, EventArgs e)

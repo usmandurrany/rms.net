@@ -31,13 +31,23 @@ namespace ResultManagementSystem
                               seatno + "' AND semester ='" + semes.Text + "'";
 
             MySqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            try
             {
-                marks = Convert.ToInt32(reader[0]);
-                tot_marks = Convert.ToInt32(reader[1]) + Convert.ToInt32(reader[2]);
-                numres = Convert.ToInt32(reader[3]);
+
+
+                while (reader.Read())
+                {
+                    marks = Convert.ToInt32(reader[0]);
+                    tot_marks = Convert.ToInt32(reader[1]) + Convert.ToInt32(reader[2]);
+                    numres = Convert.ToInt32(reader[3]);
+                }
             }
+            catch (System.Exception)
+            {
+                MessageBox.Show("No results available for the selected semester", "Not Found", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }    
             reader.Close();
+
             totpap.Text = numres.ToString();
 
             double percentage = marks/(double) tot_marks;

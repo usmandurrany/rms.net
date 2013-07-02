@@ -43,13 +43,13 @@ namespace ResultManagementSystem
         private void button2_Click(object sender, EventArgs e)
         {
             string[] course = c_no.SelectedItem.ToString().Split(' ');
-            var addres = new frmaddres(tid, course[0], year.Text, semes.Text, field.Text, sec.Text, seattype.Text,
+            var viewres = new frmviewres(tid, course[0], year.Text, semes.Text, field.Text, sec.Text, seattype.Text,
                                        seatst.Text, seatend.Text, maxth.Text, maxlab.Text);
-            addres.MdiParent = MdiParent;
-            addres.Dock = DockStyle.Right;
-            addres.Width = (MdiParent.Width - 315);
-            addres.Height = (MdiParent.Height - 15);
-            addres.Show();
+            viewres.MdiParent = MdiParent;
+            viewres.Dock = DockStyle.Right;
+            //viewres.Width = (MdiParent.Width - 315);
+            //viewres.Height = (MdiParent.Height - 15);
+            viewres.Show();
             Close();
         }
 
