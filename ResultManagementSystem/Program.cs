@@ -26,7 +26,7 @@ namespace ResultManagementSystem
         public static frmsidebar sidebar;
         public static frmlogin login;
         public static MenuStrip mnubar;
-        public static frmviewres viewres;
+        public static frmdgview viewres;
         public static string[] usr_details = new string[9];
     }
 

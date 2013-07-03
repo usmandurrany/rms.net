@@ -1,6 +1,6 @@
 ﻿namespace ResultManagementSystem
 {
-    partial class frmviewres
+    partial class frmdgview
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.viewres = new System.Windows.Forms.DataGridView();
+            this.dgview = new System.Windows.Forms.DataGridView();
             this.mnusearch = new System.Windows.Forms.MenuStrip();
             this.txtsearch = new System.Windows.Forms.ToolStripTextBox();
             this.mnuprint = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,17 +39,17 @@
             this.mnusave = new System.Windows.Forms.ToolStripMenuItem();
             this.mnucreate = new System.Windows.Forms.ToolStripMenuItem();
             this.mnucancel = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.viewres)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgview)).BeginInit();
             this.mnusearch.SuspendLayout();
             this.SuspendLayout();
             // 
-            // viewres
+            // dgview
             // 
-            this.viewres.AllowUserToAddRows = false;
-            this.viewres.AllowUserToDeleteRows = false;
-            this.viewres.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.viewres.BackgroundColor = System.Drawing.Color.White;
-            this.viewres.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgview.AllowUserToAddRows = false;
+            this.dgview.AllowUserToDeleteRows = false;
+            this.dgview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgview.BackgroundColor = System.Drawing.Color.White;
+            this.dgview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(58)))), ((int)(((byte)(118)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -58,8 +58,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.viewres.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.viewres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -67,18 +67,18 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.viewres.DefaultCellStyle = dataGridViewCellStyle2;
-            this.viewres.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewres.GridColor = System.Drawing.Color.White;
-            this.viewres.Location = new System.Drawing.Point(0, 0);
-            this.viewres.Name = "viewres";
-            this.viewres.ReadOnly = true;
-            this.viewres.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.viewres.RowHeadersVisible = false;
-            this.viewres.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.viewres.Size = new System.Drawing.Size(657, 545);
-            this.viewres.TabIndex = 0;
-            this.viewres.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewres_CellValueChanged);
+            this.dgview.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgview.GridColor = System.Drawing.Color.White;
+            this.dgview.Location = new System.Drawing.Point(0, 0);
+            this.dgview.Name = "dgview";
+            this.dgview.ReadOnly = true;
+            this.dgview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgview.RowHeadersVisible = false;
+            this.dgview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgview.Size = new System.Drawing.Size(657, 545);
+            this.dgview.TabIndex = 0;
+            this.dgview.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.viewres_CellValueChanged);
             // 
             // mnusearch
             // 
@@ -168,19 +168,19 @@
             this.mnucancel.Text = "Cancel";
             this.mnucancel.Click += new System.EventHandler(this.mnucancel_Click);
             // 
-            // frmviewres
+            // frmdgview
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(657, 545);
-            this.Controls.Add(this.viewres);
+            this.Controls.Add(this.dgview);
             this.Controls.Add(this.mnusearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmviewres";
+            this.Name = "frmdgview";
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmviewres_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.viewres)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgview)).EndInit();
             this.mnusearch.ResumeLayout(false);
             this.mnusearch.PerformLayout();
             this.ResumeLayout(false);
@@ -190,7 +190,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView viewres;
+        private System.Windows.Forms.DataGridView dgview;
         private System.Windows.Forms.MenuStrip mnusearch;
         private System.Windows.Forms.ToolStripTextBox txtsearch;
         private System.Windows.Forms.ToolStripMenuItem mnuprint;

@@ -39,7 +39,7 @@ namespace ResultManagementSystem
             if (searchas.Text == "Year of Enrolment")
                 column = "yoe";
 
-            var resview = new frmviewres(database.dt_query("SELECT * FROM student WHERE " + column.ToLower() + " LIKE '%" + searchstr.Text + "%'"));
+            var resview = new frmdgview(database.dt_query("SELECT * FROM student WHERE " + column.ToLower() + " LIKE '%" + searchstr.Text + "%'"));
             resview.MdiParent = MdiParent;
 
 
@@ -65,7 +65,7 @@ namespace ResultManagementSystem
             if (fsearchas.Text == "Faculty of")
                 column = "f_of";
 
-            var resview = new frmviewres(database.dt_query("SELECT * FROM faculty WHERE " + column.ToLower() + " LIKE '%" + searchstrf.Text + "%'"), "faculty");
+            var resview = new frmdgview(database.dt_query("SELECT * FROM faculty WHERE " + column.ToLower() + " LIKE '%" + searchstrf.Text + "%'"), "faculty");
             resview.MdiParent = MdiParent;
 
 

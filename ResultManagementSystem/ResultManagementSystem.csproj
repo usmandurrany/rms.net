@@ -83,10 +83,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrystalReport1.cs">
+    <Compile Include="resrpt.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <DependentUpon>resrpt.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSet1.cs">
@@ -134,11 +134,11 @@
     <Compile Include="addrc.Designer.cs">
       <DependentUpon>addrc.cs</DependentUpon>
     </Compile>
-    <Compile Include="viewres.cs">
+    <Compile Include="dgview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="viewres.Designer.cs">
-      <DependentUpon>viewres.cs</DependentUpon>
+    <Compile Include="dgview.Designer.cs">
+      <DependentUpon>dgview.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -163,9 +163,9 @@
     <EmbeddedResource Include="addsf.resx">
       <DependentUpon>addsf.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport1.rpt">
+    <EmbeddedResource Include="resrpt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+      <LastGenOutput>resrpt.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="gpcalc.resx">
       <DependentUpon>gpcalc.cs</DependentUpon>
@@ -182,8 +182,8 @@
     <EmbeddedResource Include="addrc.resx">
       <DependentUpon>addrc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="viewres.resx">
-      <DependentUpon>viewres.cs</DependentUpon>
+    <EmbeddedResource Include="dgview.resx">
+      <DependentUpon>dgview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

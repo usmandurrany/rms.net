@@ -74,7 +74,7 @@ namespace ResultManagementSystem
             if (item < 0)
                 item = 0;
             string[] course = reslist.Items[item].ToString().Split(' ');
-            var viewres = new frmviewres(course[0], course[2], course[4]);
+            var viewres = new frmdgview(course[0], course[2], course[4]);
             viewres.MdiParent = MdiParent;
 
             if (Application.OpenForms.Count == 2)

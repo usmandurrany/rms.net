@@ -43,7 +43,7 @@ namespace ResultManagementSystem
         private void button2_Click(object sender, EventArgs e)
         {
             string[] course = c_no.SelectedItem.ToString().Split(' ');
-            var viewres = new frmviewres(tid, course[0], year.Text, semes.Text, field.Text, sec.Text, seattype.Text,
+            var viewres = new frmdgview(tid, course[0], year.Text, semes.Text, field.Text, sec.Text, seattype.Text,
                                        seatst.Text, seatend.Text, maxth.Text, maxlab.Text);
             viewres.MdiParent = MdiParent;
             viewres.Dock = DockStyle.Right;

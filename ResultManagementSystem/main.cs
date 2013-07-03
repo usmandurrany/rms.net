@@ -25,7 +25,7 @@ namespace ResultManagementSystem
             common.main = this;
             var sidebar = new frmsidebar();
             var login = new frmlogin();
-            var viewres = new frmviewres();
+            var viewres = new frmdgview();
 
             common.mnubar = mnubar;
             common.login = login;

@@ -60,7 +60,6 @@ C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSys
 C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSystem\obj\Debug\ResultManagementSystem.frmanares.resources
 C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSystem\obj\Debug\ResultManagementSystem.frmsearch.resources
 C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSystem\obj\Debug\ResultManagementSystem.frmaddrc.resources
-C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSystem\obj\Debug\ResultManagementSystem.frmviewres.resources
 C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSystem\obj\Debug\ResultManagementSystem.frmlogin.resources
 C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSystem\obj\Debug\ResultManagementSystem.frmmain.resources
 C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSystem\obj\Debug\ResultManagementSystem.frmsidebar.resources
@@ -68,3 +67,4 @@ C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSys
 C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSystem\obj\Debug\ResultManagementSystem.csproj.GenerateResource.Cache
 C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSystem\obj\Debug\PartentChildFormLogin.exe.manifest
 C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSystem\obj\Debug\PartentChildFormLogin.application
+C:\Users\Usman\Documents\Visual Studio 2012\Projects\rms.net\ResultManagementSystem\obj\Debug\ResultManagementSystem.frmdgview.resources

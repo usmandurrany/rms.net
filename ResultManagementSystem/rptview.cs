@@ -6,7 +6,7 @@ namespace ResultManagementSystem
 {
     public partial class frmrptview : Form
     {
-        private readonly CrystalReport1 rpt = new CrystalReport1();
+        private readonly resrpt rpt = new resrpt();
         private readonly string tname;
 
         public frmrptview(DataTable dt, string tname)
@@ -18,7 +18,7 @@ namespace ResultManagementSystem
 
         private void frmrptview_Load(object sender, EventArgs e)
         {
-            crystalReportViewer1.ReportSource = rpt;
+            rptview.ReportSource = rpt;
             rpt.SummaryInfo.ReportTitle = tname;
         }
 

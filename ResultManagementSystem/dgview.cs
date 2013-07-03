@@ -5,7 +5,7 @@ using MySql.Data.MySqlClient;
 
 namespace ResultManagementSystem
 {
-    public partial class frmviewres : Form
+    public partial class frmdgview : Form
     {
         private string course;
         //private string semester;
@@ -26,10 +26,10 @@ namespace ResultManagementSystem
       //  private readonly string year;
         private string field;
 
-        public frmviewres()
+        public frmdgview()
         { InitializeComponent(); }
 
-        public frmviewres(params string[] values)
+        public frmdgview(params string[] values)
         {
 
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace ResultManagementSystem
             mnusave.Visible = false;
             mnucreate.Visible = true;
             mnucancel.Visible = true;
-            viewres.ReadOnly = false;
+            dgview.ReadOnly = false;
 
             dt = new DataTable();
             this.tid = values[0];
@@ -84,24 +84,24 @@ namespace ResultManagementSystem
             {
             }
 
-            viewres.DataSource = dt;
-            viewres.Columns[0].HeaderText = "Seat #";
-            viewres.Columns[1].HeaderText = "Course #";
-            viewres.Columns[2].HeaderText = "Max Marks (TH)";
-            viewres.Columns[3].HeaderText = "Obtained Marks (TH)";
-            viewres.Columns[4].HeaderText = "Max Marks (LAB)";
-            viewres.Columns[5].HeaderText = "Obatained Marks (LAB)";
-            viewres.Columns[6].HeaderText = "Total Marks (TH + LAB)";
-            viewres.Columns[7].HeaderText = "Teacher ID";
-            viewres.Columns[8].HeaderText = "Section";
-            viewres.Columns[9].HeaderText = "Year";
-            viewres.Columns[10].HeaderText = "Semester";
+            dgview.DataSource = dt;
+            dgview.Columns[0].HeaderText = "Seat #";
+            dgview.Columns[1].HeaderText = "Course #";
+            dgview.Columns[2].HeaderText = "Max Marks (TH)";
+            dgview.Columns[3].HeaderText = "Obtained Marks (TH)";
+            dgview.Columns[4].HeaderText = "Max Marks (LAB)";
+            dgview.Columns[5].HeaderText = "Obatained Marks (LAB)";
+            dgview.Columns[6].HeaderText = "Total Marks (TH + LAB)";
+            dgview.Columns[7].HeaderText = "Teacher ID";
+            dgview.Columns[8].HeaderText = "Section";
+            dgview.Columns[9].HeaderText = "Year";
+            dgview.Columns[10].HeaderText = "Semester";
 
-            viewres.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            viewres.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        public frmviewres(DataTable dt)
+        public frmdgview(DataTable dt)
         {
             InitializeComponent();
             mnuanares.Visible = false;
@@ -111,23 +111,23 @@ namespace ResultManagementSystem
             mnusave.Visible = false;
             mnucreate.Visible = false;
             mnucancel.Visible = false;
-            viewres.DataSource = dt;
-            viewres.Columns[0].HeaderText = "Seat #";
-            viewres.Columns[1].HeaderText = "Student Name";
-            viewres.Columns[2].HeaderText = "Father Name";
-            viewres.Columns[3].HeaderText = "Date of Birth";
-            viewres.Columns[4].HeaderText = "Field";
-            viewres.Columns[5].HeaderText = "Section";
-            viewres.Columns[6].HeaderText = "Semester";
-            viewres.Columns[7].HeaderText = "Admission Date";
-            viewres.Columns[8].Visible = false;
-            viewres.Columns[9].Visible = false;
+            dgview.DataSource = dt;
+            dgview.Columns[0].HeaderText = "Seat #";
+            dgview.Columns[1].HeaderText = "Student Name";
+            dgview.Columns[2].HeaderText = "Father Name";
+            dgview.Columns[3].HeaderText = "Date of Birth";
+            dgview.Columns[4].HeaderText = "Field";
+            dgview.Columns[5].HeaderText = "Section";
+            dgview.Columns[6].HeaderText = "Semester";
+            dgview.Columns[7].HeaderText = "Admission Date";
+            dgview.Columns[8].Visible = false;
+            dgview.Columns[9].Visible = false;
 
-            viewres.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            viewres.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgview.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgview.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
-        public frmviewres(DataTable dt, string type)
+        public frmdgview(DataTable dt, string type)
         {
             InitializeComponent();
             mnuanares.Visible = false;
@@ -137,20 +137,20 @@ namespace ResultManagementSystem
             mnusave.Visible = false;
             mnucreate.Visible = false;
             mnucancel.Visible = false;
-            viewres.DataSource = dt;
-            viewres.Columns[0].HeaderText = "Teacher ID";
-            viewres.Columns[1].HeaderText = "Teacher Name";
-            viewres.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            viewres.Columns[2].HeaderText = "Email";
-            viewres.Columns[3].HeaderText = "Qualification";
-            viewres.Columns[4].HeaderText = "Faculty of";
+            dgview.DataSource = dt;
+            dgview.Columns[0].HeaderText = "Teacher ID";
+            dgview.Columns[1].HeaderText = "Teacher Name";
+            dgview.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgview.Columns[2].HeaderText = "Email";
+            dgview.Columns[3].HeaderText = "Qualification";
+            dgview.Columns[4].HeaderText = "Faculty of";
 
 
-            viewres.Columns[5].Visible = false;
-            viewres.Columns[6].Visible = false;
+            dgview.Columns[5].Visible = false;
+            dgview.Columns[6].Visible = false;
         }
 
-        public frmviewres(string course, string section, string year)
+        public frmdgview(string course, string section, string year)
         {
             InitializeComponent();
             this.course = course;
@@ -161,29 +161,29 @@ namespace ResultManagementSystem
             this.year = year;
             dt = database.dt_query("SELECT result.*, student.seatno, student.s_name FROM result LEFT JOIN student on result.seatno = student.seatno WHERE result.c_no ='" +
                 course + "' AND result.section = '" + section + "' AND result.year = '" + year + "'");
-            viewres.DataSource = dt;
-            viewres.Columns[0].Visible = false;
-            viewres.Columns[1].HeaderText = "Seat #";
-            viewres.Columns[2].HeaderText = "Course #";
-            viewres.Columns[3].HeaderText = "Max Marks(TH)";
-            viewres.Columns[4].HeaderText = "Obtained Marks(TH)";
-            viewres.Columns[5].HeaderText = "Max Marks(LB)";
-            viewres.Columns[6].HeaderText = "Obtained Marks(LB)";
-            viewres.Columns[7].HeaderText = "Total";
-            viewres.Columns[8].HeaderText = "TeacherID";
-            viewres.Columns[9].HeaderText = "Section";
-            viewres.Columns[10].HeaderText = "Year";
-            viewres.Columns[11].HeaderText = "Semester";
+            dgview.DataSource = dt;
+            dgview.Columns[0].Visible = false;
+            dgview.Columns[1].HeaderText = "Seat #";
+            dgview.Columns[2].HeaderText = "Course #";
+            dgview.Columns[3].HeaderText = "Max Marks(TH)";
+            dgview.Columns[4].HeaderText = "Obtained Marks(TH)";
+            dgview.Columns[5].HeaderText = "Max Marks(LB)";
+            dgview.Columns[6].HeaderText = "Obtained Marks(LB)";
+            dgview.Columns[7].HeaderText = "Total";
+            dgview.Columns[8].HeaderText = "TeacherID";
+            dgview.Columns[9].HeaderText = "Section";
+            dgview.Columns[10].HeaderText = "Year";
+            dgview.Columns[11].HeaderText = "Semester";
 
-            viewres.Columns[8].Visible = false;
-            viewres.Columns[9].Visible = false;
-            viewres.Columns[10].Visible = false;
-            viewres.Columns[11].Visible = false;
-            viewres.Columns[12].Visible = false;
+            dgview.Columns[8].Visible = false;
+            dgview.Columns[9].Visible = false;
+            dgview.Columns[10].Visible = false;
+            dgview.Columns[11].Visible = false;
+            dgview.Columns[12].Visible = false;
 
-            viewres.Columns[13].HeaderText = "Students Name";
-            viewres.Columns[13].DisplayIndex = 2;
-            viewres.Columns[13].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgview.Columns[13].HeaderText = "Students Name";
+            dgview.Columns[13].DisplayIndex = 2;
+            dgview.Columns[13].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
            
         }
@@ -212,24 +212,24 @@ namespace ResultManagementSystem
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
 
-            ((DataTable) viewres.DataSource).DefaultView.RowFilter = string.Format("seatno LIKE '%{0}%'",
+            ((DataTable) dgview.DataSource).DefaultView.RowFilter = string.Format("seatno LIKE '%{0}%'",
                                                                                     txtsearch.Text);
 
-            viewres.DataSource = dt;
-            viewres.Columns[0].Visible = false;
-            viewres.Columns[1].HeaderText = "Seat #";
-            viewres.Columns[2].HeaderText = "Course #";
-            viewres.Columns[3].HeaderText = "Max Marks(TH)";
-            viewres.Columns[4].HeaderText = "Obtained Marks(TH)";
-            viewres.Columns[5].HeaderText = "Max Marks(LB)";
-            viewres.Columns[6].HeaderText = "Obtained Marks(LB)";
-            viewres.Columns[7].HeaderText = "Total";
-            viewres.Columns[8].HeaderText = "TeacherID";
-            viewres.Columns[8].Visible = false;
-            viewres.Columns[9].Visible = false;
-            viewres.Columns[10].HeaderText = "Students Name";
-            viewres.Columns[10].DisplayIndex = 2;
-            viewres.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgview.DataSource = dt;
+            dgview.Columns[0].Visible = false;
+            dgview.Columns[1].HeaderText = "Seat #";
+            dgview.Columns[2].HeaderText = "Course #";
+            dgview.Columns[3].HeaderText = "Max Marks(TH)";
+            dgview.Columns[4].HeaderText = "Obtained Marks(TH)";
+            dgview.Columns[5].HeaderText = "Max Marks(LB)";
+            dgview.Columns[6].HeaderText = "Obtained Marks(LB)";
+            dgview.Columns[7].HeaderText = "Total";
+            dgview.Columns[8].HeaderText = "TeacherID";
+            dgview.Columns[8].Visible = false;
+            dgview.Columns[9].Visible = false;
+            dgview.Columns[10].HeaderText = "Students Name";
+            dgview.Columns[10].DisplayIndex = 2;
+            dgview.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
         }
 
@@ -264,7 +264,7 @@ namespace ResultManagementSystem
 
         private void mnuedit_Click(object sender, EventArgs e)
         {
-            viewres.ReadOnly = false;
+            dgview.ReadOnly = false;
             mnusave.Enabled = true;
             mnuedit.Enabled = false;
         }
@@ -314,11 +314,11 @@ namespace ResultManagementSystem
         {
             try
             {
-                if (viewres.Columns[e.ColumnIndex].Index == 3 || viewres.Columns[e.ColumnIndex].Index == 5)
+                if (dgview.Columns[e.ColumnIndex].Index == 3 || dgview.Columns[e.ColumnIndex].Index == 5)
                 {
-                    viewres[6, e.RowIndex].Value = Convert.ToString(
-                        Convert.ToInt32(viewres[3, e.RowIndex].Value) +
-                        Convert.ToInt32(viewres[5, e.RowIndex].Value));
+                    dgview[6, e.RowIndex].Value = Convert.ToString(
+                        Convert.ToInt32(dgview[3, e.RowIndex].Value) +
+                        Convert.ToInt32(dgview[5, e.RowIndex].Value));
                 }
             }
             catch (ArgumentOutOfRangeException)
