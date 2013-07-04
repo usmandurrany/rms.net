@@ -137,7 +137,7 @@
             this.searchas.FormattingEnabled = true;
             this.searchas.Items.AddRange(new object[] {
             "Student Name",
-            "Father Name ",
+            "Father Name",
             "Field",
             "Section",
             "Semester",
