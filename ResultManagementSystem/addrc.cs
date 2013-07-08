@@ -32,6 +32,11 @@ namespace ResultManagementSystem
                 c_no.Items.Add(reader[0] + " " + reader[1]);
             }
             reader.Close();
+            semes.SelectedItem = semes.Items[0];
+            field.SelectedItem = field.Items[0];
+            sec.SelectedItem = sec.Items[0];
+            c_no.SelectedItem = c_no.Items[0];
+
         }
 
         public void GetTID(string tname, string id)
@@ -81,7 +86,12 @@ namespace ResultManagementSystem
             cmd.Connection = database.conn;
             cmd.CommandText = "INSERT INTO course(c_no, c_name, c_hr, c_semester) VALUES('" + cno.Text + "', '" +
                               cname.Text + "', '" + chr.Text + "', '" + csemes.Text + "')";
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (SystemException){}
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -92,6 +102,11 @@ namespace ResultManagementSystem
         private void seatst_TextChanged(object sender, EventArgs e)
         {
             seatend.Text = seatst.Text;
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

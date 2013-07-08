@@ -28,6 +28,7 @@ namespace ResultManagementSystem
                     sec.Text += details[6];
                     semes.Text += details[7];
                     yoe.Text += details[8]; // reader pos 7 list pos 8
+                    common.usr_details[0] = "student";
                 }
                 if (details[5] == "1")
                 {
@@ -40,6 +41,8 @@ namespace ResultManagementSystem
                     sec.Visible = false;
                     semes.Visible = false;
                     yoe.Visible = false; // reader pos 7 list pos 8
+                    common.usr_details[0] = "faculty";
+
                 }
             }
             catch

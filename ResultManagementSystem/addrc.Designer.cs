@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.seatend = new System.Windows.Forms.TextBox();
             this.year = new System.Windows.Forms.DateTimePicker();
             this.sec = new System.Windows.Forms.ComboBox();
             this.field = new System.Windows.Forms.ComboBox();
@@ -61,7 +62,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.seatend = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -110,6 +110,16 @@
             this.tabPage1.Size = new System.Drawing.Size(370, 288);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Result";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // seatend
+            // 
+            this.seatend.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seatend.Location = new System.Drawing.Point(290, 171);
+            this.seatend.Name = "seatend";
+            this.seatend.Size = new System.Drawing.Size(70, 23);
+            this.seatend.TabIndex = 46;
+            this.seatend.Text = "0";
             // 
             // year
             // 
@@ -443,15 +453,6 @@
             this.label13.Size = new System.Drawing.Size(84, 17);
             this.label13.TabIndex = 31;
             this.label13.Text = "Course No.:";
-            // 
-            // seatend
-            // 
-            this.seatend.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seatend.Location = new System.Drawing.Point(290, 171);
-            this.seatend.Name = "seatend";
-            this.seatend.Size = new System.Drawing.Size(70, 23);
-            this.seatend.TabIndex = 46;
-            this.seatend.Text = "0";
             // 
             // frmaddrc
             // 

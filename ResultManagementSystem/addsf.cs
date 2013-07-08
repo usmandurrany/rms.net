@@ -18,7 +18,12 @@ namespace ResultManagementSystem
 
             cmd.Connection = database.conn;
             cmd.CommandText = "INSERT INTO student(seatno, s_name, f_name, dob, field, sec, semester, yoe) VALUES('" +txtseat.Text + "', '" + txtsname.Text + "', '" + txtfname.Text + "', '" + dobpick.Text +"', '" + txtfield.Text + "', '" + txtsec.Text + "', '" + txtcursem.Text + "', '" +yoepick.Text + "' )";
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch(SystemException){}
+            this.Close();
         }
 
         private void frmaddstu_Load(object sender, EventArgs e)
@@ -28,6 +33,7 @@ namespace ResultManagementSystem
             yoepick.CustomFormat = "yyyy";
             dobpick.Format = DateTimePickerFormat.Custom;
             dobpick.CustomFormat = "dd-MM-yyyy";
+           
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -61,9 +67,25 @@ namespace ResultManagementSystem
             var cmd = new MySqlCommand();
 
             cmd.Connection = database.conn;
-            cmd.CommandText = "INSERT INTO faculty(t_name, , email, qualification, f_off) VALUES('" + tname.Text +
+
+            cmd.CommandText = "INSERT INTO faculty(t_name, email, qualification, f_of) VALUES('" + tname.Text +
                               "', '" + email.Text + "', '" + quali.Text + "', '" + fof.Text + "')";
-            cmd.ExecuteNonQuery();
+            
+                cmd.ExecuteNonQuery();
+     
+            this.Close();
+            
+        
+    }
+
+        private void txtsname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -104,6 +104,7 @@
             this.tabPage1.Size = new System.Drawing.Size(352, 253);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Student Record";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // button2
             // 
@@ -213,6 +214,7 @@
             this.txtsname.Name = "txtsname";
             this.txtsname.Size = new System.Drawing.Size(201, 23);
             this.txtsname.TabIndex = 47;
+            this.txtsname.TextChanged += new System.EventHandler(this.txtsname_TextChanged);
             // 
             // s_name
             // 

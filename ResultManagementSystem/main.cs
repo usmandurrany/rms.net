@@ -11,7 +11,7 @@ namespace ResultManagementSystem
         private database db = new database();
         private string tid;
 
-
+        
         public frmmain()
         {
             InitializeComponent();

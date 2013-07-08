@@ -124,10 +124,13 @@
   <data name="txtpass.Location" type="System.Drawing.Point, System.Drawing">
     <value>299, 110</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtpass.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
   <data name="txtpass.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 23</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtpass.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -378,7 +381,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALwAAABkCAYAAAA8JFrpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACw0AAAsNAe0HwCwAABBfSURBVHhe7Z0HsCxFFYb3Pp5ZwYw554gJMSuYFUNhQrHK
+        YQUAAAAJcEhZcwAACwwAAAsMAT9AIsgAABBfSURBVHhe7Z0HsCxFFYb3Pp5ZwYw554gJMSuYFUNhQrHK
         SJkRETGUOVKgYkJLS8ucMZQKZlTUMos5lTnngDnh/z3vWuvcv8/0zPTs3Tu3/6qv3qtTOzN7d//t6T59
         umd26qmnVirbBhusVKaKDVYqU8UGK5WpYoOVylSxwUplqthgpTJVbLBSmSo2OCFOLx4g3j6QF4izCXeN
         Vebewv09XXmUcOffctjghDijeL4Yql+I/YW7xqpydvE1UUKvEu4aWw4bnBClDP9v8UJxZuGus4rcSvxR
@@ -524,7 +527,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAYAAAByfjF8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxAAAAsQAa0jvXUAAABLSURBVBhXbcTZDYAgEAXAbckbS/BELMzbWO5zgxIi63wM
+        YQUAAAAJcEhZcwAACw8AAAsPAZL5A6UAAABLSURBVBhXbcTZDYAgEAXAbckbS/BELMzbWO5zgxIi63wM
         leOFNyNT5pQNtgNU+LQr1zvXu7Knjeu49K92BSVBzQKKv0W1bZZVvgk37B9XTj7JBIEAAAAASUVORK5C
         YII=
 </value>

@@ -7,6 +7,7 @@ namespace ResultManagementSystem
 {
     public partial class frmdgview : Form
     {
+        
         private string course;
         //private string semester;
         private MySqlDataAdapter da;
@@ -29,7 +30,7 @@ namespace ResultManagementSystem
         public frmdgview()
         { InitializeComponent(); }
 
-        public frmdgview(params string[] values)
+        public frmdgview(params string[] values) //new result constructor
         {
 
             InitializeComponent();
@@ -101,7 +102,7 @@ namespace ResultManagementSystem
             dgview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        public frmdgview(DataTable dt)
+        public frmdgview(DataTable dt) //student search constructor
         {
             InitializeComponent();
             mnuanares.Visible = false;
@@ -127,7 +128,7 @@ namespace ResultManagementSystem
             dgview.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
-        public frmdgview(DataTable dt, string type)
+        public frmdgview(DataTable dt, string type) // faculty search constructor
         {
             InitializeComponent();
             mnuanares.Visible = false;
@@ -150,12 +151,18 @@ namespace ResultManagementSystem
             dgview.Columns[6].Visible = false;
         }
 
-        public frmdgview(string course, string section, string year)
+        public frmdgview(string course, string section, string year) // result view constructor
         {
             InitializeComponent();
             this.course = course;
             this.section = section;
-            
+            if (common.usr_details[0] == "student")
+            {
+                mnuedit.Visible = false;
+                mnusave.Visible = false;
+                mnuprint.Visible = false;
+
+            }
             mnucreate.Visible = false;
             mnucancel.Visible = false;
             this.year = year;
@@ -344,4 +351,5 @@ namespace ResultManagementSystem
                 Close();
         }
     }
+
 }
